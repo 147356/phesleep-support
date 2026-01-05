@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phesleep - 技术支持</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+
+        /* 语言切换 */
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .lang-switch a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .lang-switch a:hover { background: rgba(255,255,255,0.15); color: white; }
+        .lang-switch a.active { background: rgba(255,255,255,0.25); color: white; border-color: white; }
+
+        /* 头部 */
+        header { text-align: center; margin-bottom: 40px; }
+        .logo {
+            width: 80px; height: 80px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 40px;
+        }
+        h1 { color: white; font-size: 2rem; font-weight: 600; margin-bottom: 8px; }
+        .subtitle { color: rgba(255,255,255,0.8); font-size: 1.1rem; }
+
+        /* 卡片 */
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .card h2 { font-size: 1.3rem; margin-bottom: 16px; color: #1a1a2e; }
+        .card p { color: #555; margin-bottom: 12px; }
+
+        /* 联系按钮 */
+        .contact-email {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .contact-email:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        /* FAQ */
+        .faq-item { border-bottom: 1px solid #eee; padding: 16px 0; }
+        .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .faq-item h3 { font-size: 1rem; color: #1a1a2e; margin-bottom: 8px; }
+        .faq-item p { color: #666; font-size: 0.95rem; margin-bottom: 0; }
+
+        /* 链接 */
+        .links { display: flex; gap: 16px; flex-wrap: wrap; }
+        .link-btn { color: #667eea; text-decoration: none; font-weight: 500; }
+        .link-btn:hover { text-decoration: underline; }
+
+        footer { text-align: center; color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <a href="index.html" class="active">简体中文</a>
+            <a href="zh-Hant.html">繁體中文</a>
+            <a href="ja.html">日本語</a>
+            <a href="en.html">English</a>
+        </div>
+
+        <header>
+            <div class="logo">🌙</div>
+            <h1>Phesleep</h1>
+            <p class="subtitle">AI 智能助眠 · 技术支持</p>
+        </header>
+
+        <div class="card">
+            <h2>📧 联系我们</h2>
+            <p>如果您在使用 Phesleep 时遇到任何问题，欢迎通过以下方式联系我们：</p>
+            <a href="mailto:phesleep@outlook.com" class="contact-email">phesleep@outlook.com</a>
+            <p style="margin-top: 16px; font-size: 0.9rem; color: #888;">我们通常会在 24-48 小时内回复您的邮件。</p>
+        </div>
+
+        <div class="card">
+            <h2>❓ 常见问题</h2>
+            <div class="faq-item">
+                <h3>Q: 如何更换语音引导的声音？</h3>
+                <p>A: 进入「我的」页面，点击「声音设置」，您可以选择不同的音色和语言。</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q: 下载的语音包存储在哪里？</h3>
+                <p>A: 语音包存储在您设备的本地存储中，不会上传到云端，保护您的隐私。</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q: 为什么语音引导会逐渐变小？</h3>
+                <p>A: 这是 Phesleep 的核心设计理念「刺激单调递减」—— 随着您逐渐入睡，声音会自然减弱直至消失，帮助您更好地进入深度睡眠。</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q: 应用支持离线使用吗？</h3>
+                <p>A: 是的，下载语音包后即可完全离线使用，无需网络连接。</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🔗 相关链接</h2>
+            <div class="links">
+                <a href="privacy.html" class="link-btn">隐私政策</a>
+                <a href="terms.html" class="link-btn">使用条款</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Phesleep. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
