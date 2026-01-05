@@ -5,25 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Phesleep</title>
     <style>
+        :root {
+            --bg: #fafafa;
+            --card: #ffffff;
+            --text: #111111;
+            --text-secondary: #666666;
+            --border: #e5e5e5;
+            --accent: #111111;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; color: #333; background: #f5f5f7; }
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        .lang-switch { display: flex; justify-content: center; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
-        .lang-switch a { color: #667eea; text-decoration: none; padding: 6px 14px; border-radius: 20px; font-size: 0.9rem; transition: all 0.2s; border: 1px solid #667eea; }
-        .lang-switch a:hover, .lang-switch a.active { background: #667eea; color: white; }
-        header { text-align: center; margin-bottom: 40px; }
-        h1 { color: #1a1a2e; font-size: 2rem; margin-bottom: 8px; }
-        .last-updated { color: #888; font-size: 0.9rem; }
-        .card { background: white; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        h2 { font-size: 1.2rem; color: #1a1a2e; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #667eea; }
-        p { margin-bottom: 12px; color: #555; }
-        ul { margin: 12px 0; padding-left: 24px; }
-        li { margin-bottom: 8px; color: #555; }
-        .highlight { background: #e8f4fd; padding: 16px; border-radius: 8px; border-left: 4px solid #667eea; }
-        .back-link { display: inline-block; color: #667eea; text-decoration: none; margin-bottom: 20px; }
-        .back-link:hover { text-decoration: underline; }
-        footer { text-align: center; color: #888; font-size: 0.9rem; margin-top: 40px; }
-        a { color: #667eea; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+        .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
+
+        .lang-switch { display: flex; justify-content: center; gap: 4px; margin-bottom: 48px; }
+        .lang-switch a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 8px 16px;
+            font-size: 13px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        .lang-switch a:hover { color: var(--text); background: var(--border); }
+        .lang-switch a.active { color: var(--card); background: var(--accent); }
+
+        .back-link {
+            display: inline-block;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 24px;
+            padding-bottom: 2px;
+            border-bottom: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+        .back-link:hover { border-color: var(--text); }
+
+        header { text-align: center; margin-bottom: 48px; }
+        h1 { font-size: 28px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 8px; }
+        .last-updated { color: var(--text-secondary); font-size: 13px; }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+        .card.highlight {
+            background: #f8f9fa;
+            border-left: 3px solid var(--accent);
+        }
+        .card h2 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.2px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+        .card p { color: var(--text-secondary); font-size: 14px; margin-bottom: 12px; }
+        .card p:last-child { margin-bottom: 0; }
+        ul { margin: 12px 0; padding-left: 20px; }
+        li { margin-bottom: 8px; color: var(--text-secondary); font-size: 14px; }
+        li:last-child { margin-bottom: 0; }
+        a { color: var(--text); }
+
+        footer {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 12px;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
     </style>
 </head>
 <body>
@@ -38,23 +99,23 @@
         <a href="en.html" class="back-link">← Back to Support</a>
 
         <header>
-            <h1>🔒 Privacy Policy</h1>
+            <h1>Privacy Policy</h1>
             <p class="last-updated">Last Updated: January 2026</p>
         </header>
 
         <div class="card highlight">
-            <p><strong>Core Commitment:</strong> Phesleep follows the "Data Minimization" principle. We do not collect any physiological data. Your privacy is our top priority.</p>
+            <p><strong>Core Commitment:</strong> Phesleep follows the "Data Minimization" principle. I do not collect any physiological data. Your privacy is the top priority.</p>
         </div>
 
         <div class="card">
-            <h2>1. Information We Collect</h2>
-            <p>We adhere to minimal data collection principles:</p>
+            <h2>1. Information I Collect</h2>
+            <p>I adhere to minimal data collection principles:</p>
             <ul>
                 <li><strong>Account Information</strong>: Only your email address if you choose to register (optional)</li>
                 <li><strong>Usage Preferences</strong>: Your selected voice, language settings (stored locally)</li>
                 <li><strong>Device Information</strong>: Basic device model information for app compatibility</li>
             </ul>
-            <p><strong>We Do NOT Collect:</strong></p>
+            <p><strong>I Do NOT Collect:</strong></p>
             <ul>
                 <li>Any physiological data (heart rate, sleep cycles, etc.)</li>
                 <li>Location information</li>
@@ -63,7 +124,7 @@
         </div>
 
         <div class="card">
-            <h2>2. How We Use Information</h2>
+            <h2>2. How I Use Information</h2>
             <p>The limited information collected is only used to:</p>
             <ul>
                 <li>Provide and improve app functionality</li>
@@ -76,7 +137,7 @@
             <h2>3. Data Storage</h2>
             <ul>
                 <li><strong>Local Storage First</strong>: Voice packs and preferences are stored on your device</li>
-                <li><strong>No Cloud Sync</strong>: We do not upload your usage data to the cloud</li>
+                <li><strong>No Cloud Sync</strong>: I do not upload your usage data to the cloud</li>
                 <li><strong>Offline Use</strong>: After downloading voice packs, the app works completely offline</li>
             </ul>
         </div>
@@ -87,7 +148,7 @@
                 <li><strong>Apple App Store</strong>: For app distribution and in-app purchases</li>
                 <li><strong>Crash Reporting</strong>: Anonymous crash information to improve stability</li>
             </ul>
-            <p>We do not sell your personal information to any third parties.</p>
+            <p>I do not sell your personal information to any third parties.</p>
         </div>
 
         <div class="card">
@@ -101,13 +162,13 @@
         </div>
 
         <div class="card">
-            <h2>6. Contact Us</h2>
+            <h2>6. Contact Me</h2>
             <p>If you have any questions about this Privacy Policy, please contact:</p>
             <p><strong>Email:</strong> <a href="mailto:phesleep@outlook.com">phesleep@outlook.com</a></p>
         </div>
 
         <footer>
-            <p>&copy; 2026 Phesleep. All rights reserved.</p>
+            <p>© 2026 Phesleep</p>
         </footer>
     </div>
 </body>

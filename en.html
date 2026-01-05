@@ -5,36 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phesleep - Support</title>
     <style>
+        :root {
+            --bg: #fafafa;
+            --card: #ffffff;
+            --text: #111111;
+            --text-secondary: #666666;
+            --border: #e5e5e5;
+            --accent: #111111;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
-            color: #1a1a2e;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        .lang-switch { display: flex; justify-content: center; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
-        .lang-switch a { color: rgba(255,255,255,0.7); text-decoration: none; padding: 6px 14px; border-radius: 20px; font-size: 0.9rem; transition: all 0.2s; border: 1px solid rgba(255,255,255,0.3); }
-        .lang-switch a:hover { background: rgba(255,255,255,0.15); color: white; }
-        .lang-switch a.active { background: rgba(255,255,255,0.25); color: white; border-color: white; }
-        header { text-align: center; margin-bottom: 40px; }
-        .logo { width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 20px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 40px; }
-        h1 { color: white; font-size: 2rem; font-weight: 600; margin-bottom: 8px; }
-        .subtitle { color: rgba(255,255,255,0.8); font-size: 1.1rem; }
-        .card { background: white; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-        .card h2 { font-size: 1.3rem; margin-bottom: 16px; color: #1a1a2e; }
-        .card p { color: #555; margin-bottom: 12px; }
-        .contact-email { display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.2s, box-shadow 0.2s; }
-        .contact-email:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4); }
-        .faq-item { border-bottom: 1px solid #eee; padding: 16px 0; }
+        .container { max-width: 680px; margin: 0 auto; padding: 60px 24px; }
+
+        .lang-switch { display: flex; justify-content: center; gap: 4px; margin-bottom: 48px; }
+        .lang-switch a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 8px 16px;
+            font-size: 13px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        .lang-switch a:hover { color: var(--text); background: var(--border); }
+        .lang-switch a.active { color: var(--card); background: var(--accent); }
+
+        header { text-align: center; margin-bottom: 48px; }
+        .logo { font-size: 32px; margin-bottom: 16px; }
+        h1 { font-size: 28px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 8px; }
+        .subtitle { color: var(--text-secondary); font-size: 15px; }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+        .card h2 { font-size: 15px; font-weight: 600; margin-bottom: 12px; letter-spacing: -0.2px; }
+        .card p { color: var(--text-secondary); font-size: 14px; margin-bottom: 16px; }
+
+        .contact-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--card);
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+        .contact-btn:hover { opacity: 0.8; }
+        .hint { color: var(--text-secondary); font-size: 12px; margin-top: 12px; }
+
+        .faq-item { padding: 16px 0; border-bottom: 1px solid var(--border); }
         .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
-        .faq-item h3 { font-size: 1rem; color: #1a1a2e; margin-bottom: 8px; }
-        .faq-item p { color: #666; font-size: 0.95rem; margin-bottom: 0; }
-        .links { display: flex; gap: 16px; flex-wrap: wrap; }
-        .link-btn { color: #667eea; text-decoration: none; font-weight: 500; }
-        .link-btn:hover { text-decoration: underline; }
-        footer { text-align: center; color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-top: 40px; }
+        .faq-item h3 { font-size: 14px; font-weight: 500; margin-bottom: 8px; }
+        .faq-item p { color: var(--text-secondary); font-size: 13px; margin: 0; }
+
+        .links { display: flex; gap: 24px; }
+        .link-btn {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding-bottom: 2px;
+            border-bottom: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+        .link-btn:hover { border-color: var(--text); }
+
+        footer {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 12px;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
     </style>
 </head>
 <body>
@@ -53,34 +107,34 @@
         </header>
 
         <div class="card">
-            <h2>📧 Contact Us</h2>
-            <p>If you encounter any issues while using Phesleep, please feel free to reach out:</p>
-            <a href="mailto:phesleep@outlook.com" class="contact-email">phesleep@outlook.com</a>
-            <p style="margin-top: 16px; font-size: 0.9rem; color: #888;">We typically respond within 24-48 hours.</p>
+            <h2>Contact Me</h2>
+            <p>If you encounter any issues while using Phesleep, please feel free to reach out via email.</p>
+            <a href="mailto:phesleep@outlook.com" class="contact-btn">phesleep@outlook.com</a>
+            <p class="hint">I typically respond within 24-48 hours.</p>
         </div>
 
         <div class="card">
-            <h2>❓ Frequently Asked Questions</h2>
+            <h2>Frequently Asked Questions</h2>
             <div class="faq-item">
-                <h3>Q: How do I change the voice guidance sound?</h3>
-                <p>A: Go to "Profile" page, tap "Voice Settings", where you can select different voice tones and languages.</p>
+                <h3>How do I change the voice guidance sound?</h3>
+                <p>Go to "Profile" page, tap "Voice Settings", where you can select different voice tones and languages.</p>
             </div>
             <div class="faq-item">
-                <h3>Q: Where are downloaded voice packs stored?</h3>
-                <p>A: Voice packs are stored locally on your device and are never uploaded to the cloud, protecting your privacy.</p>
+                <h3>Where are downloaded voice packs stored?</h3>
+                <p>Voice packs are stored locally on your device and are never uploaded to the cloud, protecting your privacy.</p>
             </div>
             <div class="faq-item">
-                <h3>Q: Why does the voice guidance gradually become quieter?</h3>
-                <p>A: This is Phesleep's core design philosophy "Monotonic Decrease" — as you gradually fall asleep, the sound naturally fades until it disappears, helping you enter deep sleep more easily.</p>
+                <h3>Why does the voice guidance gradually become quieter?</h3>
+                <p>This is Phesleep's core design philosophy "Monotonic Decrease" — as you gradually fall asleep, the sound naturally fades until it disappears.</p>
             </div>
             <div class="faq-item">
-                <h3>Q: Does the app work offline?</h3>
-                <p>A: Yes, once you download voice packs, you can use the app completely offline without any network connection.</p>
+                <h3>Does the app work offline?</h3>
+                <p>Yes, once you download voice packs, you can use the app completely offline without any network connection.</p>
             </div>
         </div>
 
         <div class="card">
-            <h2>🔗 Related Links</h2>
+            <h2>Related Links</h2>
             <div class="links">
                 <a href="privacy-en.html" class="link-btn">Privacy Policy</a>
                 <a href="terms-en.html" class="link-btn">Terms of Service</a>
@@ -88,7 +142,7 @@
         </div>
 
         <footer>
-            <p>&copy; 2026 Phesleep. All rights reserved.</p>
+            <p>© 2026 Phesleep</p>
         </footer>
     </div>
 </body>
